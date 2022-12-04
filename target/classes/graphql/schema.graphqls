@@ -1,0 +1,29 @@
+type Slist {
+    slistId: ID
+    slistName: String
+    products: [Product]
+    totalPrice: Float
+}
+
+type Product{
+    productId: ID
+    productName: String
+    unitPrice: Float
+}
+
+#Root
+type Query {
+    getSlists: [Slist]
+    getSlist(slistId: ID!): Slist
+    getProducts: [Product] #TODO add an optional list id param
+    getProduct(productId: ID!): Product
+}
+
+#Root
+type Mutation {
+    addSlist(slistName: String!): Slist
+    addProduct(productName: String!, unitPrice: Float): Product
+    addProductToSlist(slistId: ID!, productId: ID!): Slist
+    removeProductFromSlist(slistId: ID!, productId: ID!): Slist
+    #TODO - addProductToSlist(slistId: ID!, productName: String!, productPrice: Float): Slist
+}
