@@ -1,5 +1,5 @@
 # stack
-Initial starter project stack with the a sample application:
+Initial starter project stack with a sample shopping list application:
 
 * SpringBoot - Java
 * Maven
