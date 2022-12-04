@@ -11,5 +11,7 @@ Initial starter project stack with the a sample application:
 * Create a mongoDB instance either local or on Atlas and add the URI to the application.properties file
 * Built and run the application
 * Access the Graphiql using  http://localhost:8080/graphiql?path=/graphql
+
+# To package the application 
 * mvn package - produces artifact and build a docker image
 * docker-compose up - starts mongodb, and the api service
